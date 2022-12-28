@@ -1,0 +1,201 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background-color: yellow;
+}
+
+.todo{
+background-color: rgb(235, 231, 231);
+width: 30%;
+height: 105vh;
+margin-left: 450px;
+margin-top: 20px;
+border-radius: 20px;
+border: 4px solid black;
+}
+.app h2{
+    position: relative;
+    left: 30px;
+    margin-top: 30px;
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+}
+.app #user{
+    position: relative;
+    right: -140px;
+    color: rgb(255, 0, 200);
+}
+.app span{
+    color: rgb(255, 0, 200);
+    position: relative;
+    left: 10px;
+}
+.app p{
+    color: gray;
+    position: relative;
+    left: 30px;
+    font-size: 14.5px;
+}
+.app h4{
+    position: relative;
+    left: 30px;
+    color: gray;
+    font-size: 13px;
+    margin-top: 10px;
+}
+.app input{
+    position: relative;
+    left: 30px;
+    margin-top: 10px;
+    padding: 15px 0px;
+    width: 90%;
+    border: 2px solid transparent;
+    border-radius: 6px;
+}
+.app ::placeholder{
+    position: relative;
+    left: 20px;
+    font-size: 15px;
+}
+.app #video{
+    position: relative;
+    right: 40px;
+}
+.app #video1{
+    position: relative;
+    right: 10px;
+}
+.app2 p{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    position: relative;
+    left: 30px;
+    top: 25px;
+    color: gray;
+}
+.box{
+    margin-top: 30px;
+    position: relative;
+    left: 30px;
+    display: flex;
+}
+#box1{
+    background-color: white;
+    width: 40%;
+    border-radius: 10px;
+    height: 15vh;
+}
+.box i{
+    margin-top: 30px;
+    margin-left: 70px;
+    margin-bottom: 10px;
+    color: dodgerblue;
+} 
+.box h4{
+    text-align: center;
+    font-family:sans-serif;
+    color: gray;
+}
+#box2{
+    background-color: white;
+    width: 40%;
+    border-radius: 10px;
+    height: 15vh;
+    position: relative;
+    left: 30px;
+}
+#box2 i{
+    color: rgb(255, 0, 200);
+}
+.todo #btn{
+    padding: 10px 140px;
+    border: none;
+    position: relative;
+    left: 30px;
+    top: 20px;
+    background-color: rgb(255, 0, 200);
+    border-radius: 10px;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1rem;
+}
+.todo #btn:hover{
+    background-color: rgb(216, 15, 172);
+}
+#p1{
+    margin-top: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+li{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    position: relative;
+    left: 30px;
+    top: 50px;
+    background-color: white;
+    padding: 10px 10px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    width: 90%;
+    list-style: none;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+}
+button{
+/* position: relative;
+left: 250px; */
+background-color: red;
+color: white;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+border: none;
+padding: 10px 10px;
+border-radius: 5px;
+}
+@media(max-width:480px){
+
+   .todo{
+     width: 100%;
+     position: relative;
+     right: 500px;
+     /* height: 50vh; */
+    } 
+    .app #user{
+    margin-left: -320px;
+   } 
+   .box i{
+    position: absolute;
+    margin-left: 5px;
+   }
+   .todo #btn{
+    padding: 10px 0px;
+    width: 90%;
+   }
+ }
+@media(max-width:1024px){
+    .todo{
+        width:85%;
+        height: 90vh;
+        position: relative;
+        right: 400px;
+    }
+    .app #user{
+        position: relative;
+        left: 400px;
+    }
+    .box i{
+        position: relative;
+        left: 50px;
+    }
+    .todo button{
+        position: relative;
+        left: 130px;
+    }
+    button{
+   margin-right: 130px;
+        
+    }
+}

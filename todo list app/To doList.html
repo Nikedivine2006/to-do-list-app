@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>To Do list app</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='./css/font-awesome.min.css'>
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/> -->
+    <link rel='stylesheet' type='text/css' media='screen' href='To Do list.css'>
+    <!-- <script src='To Do list.js'></script> -->
+</head>
+<body id="body">
+    <div class="todo">
+        <div class="app">
+            <h2>What's up,<span contenteditable>buddy</span><i class="fa fa-user-circle-o" id="user"></i></h2>
+
+            <p>CREATE A TODO</p>
+            <h4>What's on your todo list?</h4>
+            <input type="text" id="item" placeholder="e.g. make a video" ><span><i class="fa fa-camera" id="video"></i></span><span><i class="fa fa-microphone" id="video1"></i></span>
+        </div>
+            <div class="app2">
+                <p>Pick a categroy</p>
+                <div class="box">
+                <div id="box1">
+                    <i class="fa fa-circle-o" id="circle"></i>
+                    <h4>Business</h4>
+                </div>
+                <div id="box2">
+                    <i class="fa fa-circle-o"></i>
+                    <h4>personal</h4>
+                </div>
+                </div>
+                <button id="btn" onclick="select()">Add todo</button>
+                <p id="p1">TODO LIST</p>
+            </div>
+            <ul id="items">
+                <!-- <li contenteditable></li> -->
+            </ul>
+    </div>
+    <script>
+
+let ItemContainer = document.getElementById('items');
+let itemInput = document.getElementById('item');
+let box1 = document.getElementById('box1');
+let circle = document.getElementById('circle');
+let box2 = document.getElementById('box2');
+function select(){
+    let singleItem = document.createElement('li')
+    let itemName = itemInput.value;
+    let itemText =  document.createTextNode(itemName)
+    let removeBtn = document.createElement('button');
+    let btnText = document.createTextNode('DELETE');
+
+    removeBtn.appendChild(btnText)
+    singleItem.append(itemText, removeBtn);
+    ItemContainer.appendChild(singleItem);
+
+    removeBtn.addEventListener('click', ()=>{
+        ItemContainer.removeChild(singleItem);
+       
+       
+    })
+    document.getElementById('item').value='';
+    box1.addEventListener('click', ()=>{
+   singleItem.style.backgroundColor = "blue";
+})
+box2.addEventListener('click', ()=>{
+   singleItem.style.backgroundColor = "#ff00c8";
+})
+    // document.getElementById('li').contentEditable;
+}
+
+
+    </script>
+</body>
+</html>
